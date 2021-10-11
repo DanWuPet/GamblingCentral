@@ -37,7 +37,7 @@ public class CoinFlip {
 
             if (guess.equals(coinSide)) {
                 System.out.println("You guessed right and won: " + betting + " coin(s).");
-                chips = chips + betting;
+                 chips = chips + betting;
 
             } else {
                 System.out.println("You guessed wrong and lost: " + betting + " coin(s).");
