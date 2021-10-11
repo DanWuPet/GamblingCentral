@@ -11,21 +11,24 @@ public class FrontPage {
         while(i == 0){
         System.out.println("Would you like to play '(1). Heads or tails' or (2) Blackjack')");
 
-        //takes in input
-        Scanner in = new Scanner(System.in);
-        String select = in.next();
+            //takes in input
+            Scanner in = new Scanner(System.in);
+            String select = in.next();
 
-        if (select.equals("Heads and tails") || select.equals("1")) {
-            CoinFlip.coinFlip();
-        } if (select.equals("Blackjack") || select.equals("2")) {
-
-            int betting = in.nextInt();
-
-        }if (select.equals("End")){
-            i++;
+            if (select.equals("Heads and tails") || select.equals("1")) {
+                CoinFlip.coinFlip();
             }
+            if (select.equals("Blackjack") || select.equals("2")) {
+
+                int betting = in.nextInt();
+
+            }
+            if (select.equals("End")) {
+                i++;
+            }
+        }
     }
-}}
+}
 
 
 
