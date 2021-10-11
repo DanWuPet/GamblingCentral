@@ -1,8 +1,18 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class Main {
+    static Scanner bet = new Scanner(System.in);
+    public static int boughtChips;
+    static Scanner scn = new Scanner(System.in);
 
     public static void main(String[] args) {
-	// write your code here
+        System.out.println("Welcome to the Gambling pig's inn.");
+        System.out.println("How many coins would you like to buy?");
+        boughtChips = bet.nextInt();
+        System.out.println("Your total account: " + boughtChips + " coin(s).");
+        FrontPage.intro();
     }
 }
+
