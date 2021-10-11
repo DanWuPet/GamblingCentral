@@ -1,4 +1,4 @@
-/* package com.company;
+package com.company;
 
 public class Deck {
     private Card[] cards;
@@ -10,13 +10,4 @@ public class Deck {
     public Card[] getCards() {
         return this.cards;
     }
-
-
-
-
-
-    /*
-
-
 }
-*/

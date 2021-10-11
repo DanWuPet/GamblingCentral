@@ -8,8 +8,8 @@ public class FrontPage {
 
         //intro
         int i = 0;
-        while(i == 0){
-        System.out.println("Would you like to play '(1). Heads or tails' or (2) Blackjack')");
+        while (i == 0) {
+            System.out.println("Would you like to play '(1). Heads or tails' or '(2). Blackjack'");
 
             //takes in input
             Scanner in = new Scanner(System.in);
