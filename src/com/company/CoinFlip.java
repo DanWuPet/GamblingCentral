@@ -16,6 +16,7 @@ public class CoinFlip {
 //gamesetup
 
     public static int coinFlip() {
+        System.out.println("You chose to play Coin Flip, guess the outcome of the flip to win.");
         int coinValue = rnd.nextInt(3001) + 1;
 
         if (coinValue > 2) {

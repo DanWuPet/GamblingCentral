@@ -2,14 +2,22 @@ package com.company;
 
 import java.util.Scanner;
 
+import static com.company.pointSystem.globalChips;
+
 public class FrontPage {
+    static int i=0;
 
     public static void intro() {
 
         //intro
-        int i = 0;
+
         while (i == 0) {
-            System.out.println("Would you like to play '(1). Heads or tails' or '(2). Blackjack'");
+            if (globalChips == 0) {
+                System.out.print("\n" + "\n" +"You lost all your money, get out of here!!!");
+                break;
+            }
+
+            System.out.println("Would you like to play '(1). Coin Flip' or '(2). Blackjack' or '(3). Roulette' or type 'End' to end the game.");
 
             //takes in input
             Scanner in = new Scanner(System.in);
@@ -20,8 +28,9 @@ public class FrontPage {
             }
             if (select.equals("Blackjack") || select.equals("2")) {
 
-                int betting = in.nextInt();
-
+            }
+            if (select.equals("Roulette") || select.equals("3")) {
+                Roulette.roulette();
             }
             if (select.equals("End")) {
                 i++;
@@ -29,6 +38,7 @@ public class FrontPage {
         }
     }
 }
+
 
 
 
