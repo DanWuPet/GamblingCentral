@@ -19,6 +19,10 @@ public class Roulette {
 
     static List<Integer> redList = new ArrayList<>(Arrays.asList(red));
     static List<Integer> blackList = new ArrayList<>(Arrays.asList(black));
+    public static final String TEXT_RESET = "\u001B[0m";
+    public static final String TEXT_WHITE = "\u001B[37m";
+    public static final String RED_BACKGROUND = "\u001B[41m";
+    public static final String BLACK_BACKGROUND = "\u001B[40m";
 
     public static int roulette() {
         System.out.println("You chose to play Roulette, guess the outcome of the game.");
@@ -176,9 +180,9 @@ public class Roulette {
                 win = false;
             }
             if (win) {
-                System.out.println("It landed on: " + roulNum + "\n" + "You guessed right and won: " + winMul + " coin(s).");
+                System.out.println("It landed on: " + TEXT_WHITE + RED_BACKGROUND + roulNum + TEXT_RESET + "\n" + "You guessed right and won: " + winMul + " coin(s).");
             } else {
-                System.out.println("It landed on: " + roulNum + "\n" + "You guessed wrong and lost: " + betting + " coin(s).");
+                System.out.println("It landed on: " + TEXT_WHITE + BLACK_BACKGROUND + roulNum + TEXT_RESET + "\n" + "You guessed wrong and lost: " + betting + " coin(s).");
 
             }
         }
@@ -190,9 +194,9 @@ public class Roulette {
                 win = false;
             }
             if (win) {
-                System.out.println("It landed on: " + roulNum + "\n" + "You guessed right and won: " + winMul + " coin(s).");
+                System.out.println("It landed on: " + TEXT_WHITE + BLACK_BACKGROUND + roulNum + TEXT_RESET + "\n" + "You guessed right and won: " + winMul + " coin(s).");
             } else {
-                System.out.println("It landed on: " + roulNum + "\n" + "You guessed wrong and lost: " + betting + " coin(s).");
+                System.out.println("It landed on: " + TEXT_WHITE + RED_BACKGROUND + roulNum + TEXT_RESET + "\n" + "You guessed wrong and lost: " + betting + " coin(s).");
 
             }
         }

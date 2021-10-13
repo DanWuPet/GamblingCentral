@@ -15,6 +15,7 @@ public class Main {
         boughtChips = 1000;
         System.out.println("Your total account: " + boughtChips + " coin(s).");
         FrontPage.intro();
+        System.out.println(PlayingCard.arrayOfCards());
     }
 }
 
