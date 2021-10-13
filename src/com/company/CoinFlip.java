@@ -16,16 +16,21 @@ public class CoinFlip {
 //gamesetup
 
     public static int coinFlip() {
-        System.out.println("You chose to play Coin Flip, guess the outcome of the flip to win.");
-        int coinValue = rnd.nextInt(3001) + 1;
 
-        if (coinValue > 2) {
-            coinSide = "Heads";
-        } else if (coinValue > 1 && coinValue <= 3001) {
-            coinSide = "Tails";
-        } else {
-            coinSide = "Draw";
-        }
+        boolean playing = true;
+
+        while (playing && chips > 0) {
+            System.out.println("You chose to play Coin Flip, guess the outcome of the flip to win.");
+
+            int coinValue = rnd.nextInt(6001) + 1;
+
+            if (coinValue > 3001) {
+                coinSide = "Heads";
+            } else if (coinValue > 1 && coinValue <= 3001) {
+                coinSide = "Tails";
+            } else {
+                coinSide = "Draw";
+            }
 
             System.out.println("How much do you bet?");
             int betting = in.nextInt();
@@ -36,29 +41,35 @@ public class CoinFlip {
                 betting = in.nextInt();
 
             }
-                chips = chips - betting;
+            chips = chips - betting;
 
-        System.out.println("What do you choose? Heads or Tails? Or maybe the rare Draw?");
-        String guess = in.next();
-        System.out.println("It landed on " + coinSide + "!");
+            System.out.println("What do you choose? Heads or Tails? Or maybe the rare Draw?");
+            String guess = in.next();
+            System.out.println("It landed on " + coinSide + "!");
 
-        //payout
+            //payout
 
-        //correct guess
-        if (guess.equals(coinSide)) {
-            if (guess.equals("Draw")) {
-                chips = chips + (12000 * betting);
-                System.out.println("You guessed right and won: " + (betting * 10) + " coin(s).");
+            //correct guess
+            if (guess.equals(coinSide)) {
+                if (guess.equals("Draw")) {
+                    chips = chips + (12000 * betting);
+                    System.out.println("You guessed right and won: " + (betting * 10) + " coin(s).");
+                } else {
+                    chips = chips + (2 * betting);
+                    System.out.println("You guessed right and won: " + betting + " coin(s).");
+                }
+
+                //wrong guess
             } else {
-                chips = chips + (2 * betting);
-                System.out.println("You guessed right and won: " + betting + " coin(s).");
+                System.out.println("You guessed wrong and lost: " + betting + " coin(s).");
             }
-
-        //wrong guess
-        } else {
-            System.out.println("You guessed wrong and lost: " + betting + " coin(s).");
+            System.out.println("Your balance: " + chips + "\n" + "\n");
+            System.out.println("Do you wanna continue playing? (y/n)");
+            String keepPlay = in.next();
+            if (keepPlay.equals("n")) {
+                playing = false;
+            }
         }
-        System.out.println("Your balance: " + chips);
 
         globalChips = chips;
         return globalChips;

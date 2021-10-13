@@ -1,17 +1,16 @@
 package com.company;
 
-import static com.company.Main.boughtChips;
+import static com.company.Main.startChips;
 
 public class pointSystem {
-    public static int globalChips = boughtChips;
+    public static int highscore;
+    public static int globalChips = startChips;
 
-    public static void allPoints() {
+    public static int updateHighscore() {
+        if (globalChips > highscore){
+            highscore = globalChips;
+        }
 
-        System.out.println(globalChips);
-
-
-    /*
-    Skal beregne hvor mange coins brugeren har vundet/tabt og har resterende.
-     */
+        return highscore;
     }
 }

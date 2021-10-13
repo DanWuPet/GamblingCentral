@@ -12,8 +12,9 @@ public class FrontPage {
         //intro
 
         while (i == 0) {
+            updateHighscore();
             if (globalChips == 0) {
-                System.out.print("\n" + "\n" +"You lost all your money, get out of here!!!");
+                System.out.println("\n" + "\n" +"You lost all your money, get out of here!!!");
                 break;
             }
 
@@ -27,7 +28,7 @@ public class FrontPage {
                 CoinFlip.coinFlip();
             }
             if (select.equals("Blackjack") || select.equals("2")) {
-
+                BlackJack.blackjack();
             }
             if (select.equals("Roulette") || select.equals("3")) {
                 Roulette.roulette();
@@ -36,6 +37,7 @@ public class FrontPage {
                 i++;
             }
         }
+        System.out.println("Your final score for today was: " + highscore);
     }
 }
 

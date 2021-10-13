@@ -36,10 +36,10 @@ public class Roulette {
         }
 
         //betting
-        System.out.println("Where would you like to bet? You can choose between: "
+        System.out.println("Where would you like to bet? You can choose between: \n"
                 + "\n" + "Odd/Even" + "\n" + "Red/Black" + "\n" + "Straight"
-                + "\n" + "1. or 2. Half " + "\n" + "1. 2. or 3. Dozen"
-                + "\n" + "1. 2. or 3. Column");
+                + "\n" + "1. or 2.Half " + "\n" + "1. 2. or 3.Dozen"
+                + "\n" + "1. 2. or 3.Column");
         String betType = in.next();
 
         System.out.println("How much do you bet?");
@@ -68,7 +68,7 @@ public class Roulette {
         if (betType.equals("Even")) {
             winMul = 2 * betting;
             if (typeNum.equals("Even")) {
-                System.out.println("It landed on: " + roulNum + "\n" + "You guessed right and won: " + winMul + " coin(s).");
+                System.out.println("It landed on: " + roulNum + "\n" +"You guessed right and won: " + winMul + " coin(s).");
                 win = true;
             } else {
                 System.out.println("It landed on: " + roulNum + "\n" + "You guessed wrong and lost: " + betting + " coin(s).");
@@ -89,7 +89,7 @@ public class Roulette {
             }
         }
 
-        if (betType.equals("1. Half")) {
+        if (betType.equals("1.Half")) {
             winMul = 2 * betting;
             if (roulNum <= 18 && roulNum > 0) {
                 System.out.println("It landed on: " + roulNum + "\n" + "You guessed right and won: " + winMul + " coin(s).");
@@ -100,7 +100,7 @@ public class Roulette {
             }
         }
 
-        if (betType.equals("2. Half")) {
+        if (betType.equals("2.Half")) {
             winMul = 2 * betting;
             if (roulNum > 18) {
                 System.out.println("It landed on: " + roulNum + "\n" + "You guessed right and won: " + winMul + " coin(s).");
@@ -111,7 +111,7 @@ public class Roulette {
             }
         }
 
-        if (betType.equals("1. Dozen")) {
+        if (betType.equals("1.Dozen")) {
             winMul = 3 * betting;
             if (roulNum > 0 && roulNum <= 12) {
                 System.out.println("It landed on: " + roulNum + "\n" + "You guessed right and won: " + winMul + " coin(s).");
@@ -121,7 +121,7 @@ public class Roulette {
                 win = false;
             }
         }
-        if (betType.equals("2. Dozen")) {
+        if (betType.equals("2.Dozen")) {
             winMul = 3 * betting;
             if (roulNum > 12 && roulNum <= 24) {
                 System.out.println("It landed on: " + roulNum + "\n" + "You guessed right and won: " + winMul + " coin(s).");
@@ -151,7 +151,7 @@ public class Roulette {
                 win = false;
             }
         }
-        if (betType.equals("2. Column")) {
+        if (betType.equals("2.Column")) {
             winMul = 3 * betting;
             if (roulNum % 3 == 2) {
                 System.out.println("It landed on: " + roulNum + "\n" + "You guessed right and won: " + winMul + " coin(s).");
@@ -161,7 +161,7 @@ public class Roulette {
                 win = false;
             }
         }
-        if (betType.equals("3. Column")) {
+        if (betType.equals("3.Column")) {
             winMul = 3 * betting;
             if (roulNum % 3 == 0) {
                 System.out.println("It landed on: " + roulNum + "\n" + "You guessed right and won: " + winMul + " coin(s).");
