@@ -2,7 +2,6 @@ package com.company;
 
 import java.util.Scanner;
 
-
 public class Main {
     static Scanner bet = new Scanner(System.in);
     public static int startChips;

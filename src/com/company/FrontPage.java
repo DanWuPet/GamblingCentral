@@ -1,5 +1,6 @@
 package com.company;
 
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 import static com.company.pointSystem.globalChips;
@@ -8,6 +9,8 @@ public class FrontPage {
     static int i=0;
 
     public static void intro() {
+
+
 
         //intro
 
@@ -37,7 +40,8 @@ public class FrontPage {
                 i++;
             }
         }
-        System.out.println("Your final score for today was: " + highscore);
+        WriteFile.writeFile();
+        System.out.println("Your highscore of today: " + highscore + "\n" + "Your balance: " + globalChips);
     }
 }
 
