@@ -3,7 +3,10 @@ package com.company;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
+import static com.company.CreateFile.username;
 import static com.company.pointSystem.globalChips;
+import static com.company.pointSystem.highscore;
+import static com.company.pointSystem.updateHighscore;
 
 public class FrontPage {
     static int i=0;
@@ -21,7 +24,8 @@ public class FrontPage {
                 break;
             }
 
-            System.out.println("Would you like to play '(1). Coin Flip' or '(2). Blackjack' or '(3). Roulette' or type 'End' to end the game.");
+            System.out.println("\n" + "Would you like to play " + "\n" + "(1). Coin Flip "+ "\n" + "(2). Blackjack" +
+                    "\n" + "(3). Roulette" + "\n" + "Type 'End' to end the game.");
 
             //takes in input
             Scanner in = new Scanner(System.in);

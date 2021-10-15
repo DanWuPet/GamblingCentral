@@ -3,7 +3,6 @@ package com.company;
 import java.util.Random;
 import java.util.Scanner;;
 import static com.company.Main.bet;
-import static com.company.Main.boughtChips;
 import static com.company.pointSystem.globalChips;
 
 public class CoinFlip {
@@ -15,6 +14,7 @@ public class CoinFlip {
 
 //gamesetup
 
+    //String fucks with the game
     public static int coinFlip() {
 
         boolean playing = true;
