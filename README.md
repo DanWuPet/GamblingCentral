@@ -1,4 +1,4 @@
-# GamblingCentral
+# GamblingCentral 
 Vores spil skal indeholde klassiske gambling spil, som fx Black Jack og Coin Flip. 
 Det skal så være muligt for spilleren at sætte sine start point på højkant og muligvis vinde flere eller gå fallit. 
 ---
