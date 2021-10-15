@@ -1,6 +1,7 @@
 package com.company;
 
 import java.io.PrintWriter;
+import java.util.Locale;
 import java.util.Scanner;
 
 import static com.company.CreateFile.username;
@@ -29,18 +30,18 @@ public class FrontPage {
 
             //takes in input
             Scanner in = new Scanner(System.in);
-            String select = in.next();
+            String select = in.next().toLowerCase(Locale.ROOT);
 
-            if (select.equals("Coin Flip") || select.equals("1")) {
+            if (select.equals("coin flip") || select.equals("1")) {
                 CoinFlip.coinFlip();
             }
-            if (select.equals("Blackjack") || select.equals("2")) {
+            if (select.equals("blackjack") || select.equals("2")) {
                 BlackJack.blackjack();
             }
-            if (select.equals("Roulette") || select.equals("3")) {
+            if (select.equals("roulette") || select.equals("3")) {
                 Roulette.roulette();
             }
-            if (select.equals("End")) {
+            if (select.equals("end")) {
                 i++;
             }
         }
