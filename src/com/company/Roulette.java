@@ -131,7 +131,7 @@ public class Roulette {
                 win = false;
             }
         }
-        if (betType.equals("3. Dozen")) {
+        if (betType.equals("3.Dozen")) {
             winMul = 3 * betting;
             if (roulNum > 24 && roulNum <= 36) {
                 System.out.println("It landed on: " + roulNum + "\n" + "You guessed right and won: " + winMul + " coin(s).");
@@ -141,7 +141,7 @@ public class Roulette {
                 win = false;
             }
         }
-        if (betType.equals("1. Column")) {
+        if (betType.equals("1.Column")) {
             winMul = 3 * betting;
             if (roulNum % 3 == 1) {
                 System.out.println("It landed on: " + roulNum + "\n" + "You guessed right and won: " + winMul + " coin(s).");

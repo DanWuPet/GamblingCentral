@@ -7,3 +7,4 @@ Det skal så være muligt for spilleren at sætte sine start point på højkant 
 2. Pointsystem der holder styr på brugerens valuta samt hvor meget der bliver vundet/tabt.
 3. Spilleren kan have highscore, for største vinder og taber.
 4. tilføje terningspil.
+gg

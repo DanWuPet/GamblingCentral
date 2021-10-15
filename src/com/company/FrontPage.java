@@ -31,7 +31,7 @@ public class FrontPage {
             Scanner in = new Scanner(System.in);
             String select = in.next();
 
-            if (select.equals("Heads and tails") || select.equals("1")) {
+            if (select.equals("Coin Flip") || select.equals("1")) {
                 CoinFlip.coinFlip();
             }
             if (select.equals("Blackjack") || select.equals("2")) {
@@ -48,8 +48,3 @@ public class FrontPage {
         System.out.println("Your highscore of today: " + highscore + "\n" + "Your balance: " + globalChips);
     }
 }
-
-
-
-
-
